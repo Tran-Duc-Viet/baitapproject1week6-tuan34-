@@ -534,10 +534,12 @@ public class Tuan29 extends JFrame {
 	// Thiết lập action cho buton in của bài 7
 	public void setActionBtnInBai7() {
 		btnInBai7.addActionListener((e) -> {
+			textKetQuaBai7.setText("");
 			Bai7 bai7 = new Bai7();
 			textKetQuaBai7.append(bai7.getStringCaua() + "\n" + bai7.getStringCaub() + "\n" + bai7.getStringCauc()
 					+ "\n" + bai7.getStringCaud());
 
 		});
 	}
+	
 }

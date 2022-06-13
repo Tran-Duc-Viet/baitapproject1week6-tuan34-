@@ -523,7 +523,7 @@ public class Tuan31 extends JFrame {
 			textKetQuaBai3.setText("");
 			Bai3 bai3 = new Bai3(layDayBai3());
 			textKetQuaBai3.append("Giá trị Min trong dãy là: " + bai3.getMin() + "\n"
-					+ "Các số có giá trị min trong dãy là số thứ: " + bai3.getVitri());
+					+ "Các vị trí có giá trị min trong dãy là: " + bai3.getVitri());
 
 		});
 	}
@@ -558,8 +558,8 @@ public class Tuan31 extends JFrame {
 		btnInBai4.addActionListener((e) -> {
 			textKetQuaBai4.setText("");
 			Bai4 bai4 = new Bai4(layDayBai4());
-			textKetQuaBai4.append("Giá trị Min trong dãy là: " + bai4.getMin() + "\n"
-					+ "Các số có giá trị min trong dãy là số thứ: " + bai4.getVitri());
+			textKetQuaBai4.append("Giá trị max trong dãy là: " + bai4.getMin() + "\n"
+					+ "Các vị trí có giá trị max trong dãy là: " + bai4.getVitri());
 
 		});
 	}

@@ -77,7 +77,7 @@ public class Bai6 {
 			if (l.get(i).size() == 1) {
 				continue;
 			}
-			s = s + l.get(i).get(0) + " là ươc của ";
+			s = s + l.get(i).get(0) + " là ước của ";
 			for (int j = 1; j < l.get(i).size(); j++) {
 
 				s = s + String.valueOf((l.get(i)).get(j)) + " ";
