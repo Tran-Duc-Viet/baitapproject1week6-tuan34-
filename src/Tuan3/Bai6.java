@@ -85,7 +85,6 @@ public class Bai6 {
 			}
 			s = s + "trong dãy \n";
 		}
-		System.out.print(s);
 
 	}
 

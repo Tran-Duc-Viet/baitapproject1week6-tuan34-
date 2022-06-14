@@ -43,13 +43,14 @@ public class Tuan32 extends JFrame {
 	private JTextPane DeBaiBai1, DeBaiBai2, DeBaiBai3, DeBaiBai4, DeBaiBai5, DeBaiBai6, DeBaiBai7, DeBaiBai8, DeBaiBai9;
 	private JButton btnInBai1, btnInBai2, btnInBai3, btnInBai4, btnInBai5, btnInBai6, btnInBai7, btnInBai8, btnInBai9;
 	private JLabel lblNhapXauBai1, lblNhapXauBai2, lblNhapXauBai3, lblNhapXauBai4, lblNhapXauBai5, lblNhapXauBai6,
-			lblNhapTenHocSinh, lblDanhsachHocSinh;
+			lblNhapTenHocSinh, lblDanhsachHocSinh,lblNhapXauCon;
 	private JTextField layDayBai1, layXauBai2, layXauBai3, layXauBai4, layXauBai5, layXauBai6, layTenHocSinhBai7,
 			layTenHocSinhBai8, layTenHocSinhBai9;
 	protected ArrayList<String> dsList;
 	private JScrollPane scrollPane1, scrollPane2, scrollPane3;
 	private JTable danhSachHocSinhBai7, danhSachHocSinhBai8, danhSachHocSinhBai9;
 	private DefaultTableModel model;
+	private JTextField layXauCon;
 
 	/**
 	 * Launch the application.
@@ -68,6 +69,7 @@ public class Tuan32 extends JFrame {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setBounds(100, 100, 920, 561);
 		frame.getContentPane().setLayout(null);
+		frame.setTitle("Giao diện tuần 4(tuần 32) - Trần Đức Việt - MSSV: 20198275");
 		frame.setVisible(true);
 
 		btnBai1 = new JButton("Bài 1");
@@ -205,9 +207,19 @@ public class Tuan32 extends JFrame {
 		panelBai2.add(lblNhapXauBai2);
 
 		layXauBai2 = new JTextField();
-		layXauBai2.setBounds(99, 82, 550, 125);
+		layXauBai2.setBounds(109, 84, 550, 56);
 		panelBai2.add(layXauBai2);
 		layXauBai2.setColumns(10);
+		
+		lblNhapXauCon = new JLabel("Nhập xâu con:");
+		lblNhapXauCon.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNhapXauCon.setBounds(10, 152, 105, 43);
+		panelBai2.add(lblNhapXauCon);
+		
+		layXauCon = new JTextField();
+		layXauCon.setColumns(10);
+		layXauCon.setBounds(109, 148, 550, 56);
+		panelBai2.add(layXauCon);
 
 		panelBai3 = new JPanel();
 		JPanemain.add(panelBai3, "panelBai3");
@@ -617,7 +629,7 @@ public class Tuan32 extends JFrame {
 	public void setActionBtnInBai2() {
 		btnInBai2.addActionListener((e) -> {
 			textKetQuaBai2.setText("");
-			Bai2 bai2 = new Bai2(layXauBai2());
+			Bai2 bai2 = new Bai2(layXauBai2(),layXauCon.getText());
 			textKetQuaBai2.append(bai2.getKetQua());
 
 		});
@@ -840,5 +852,4 @@ public class Tuan32 extends JFrame {
 			textKetQuaBai9.append(bai9.getKetQua());
 		});
 	}
-
 }

@@ -37,6 +37,7 @@ public class CanBoView {
 		frame.getContentPane().setBackground(SystemColor.menu);
 		frame.setBounds(100, 100, 907, 508);
 		frame.getContentPane().setLayout(null);
+		frame.setTitle("Giao diện main quản lý cán bộ - Trần Đức Việt - MSSV: 20198275");
 		frame.setVisible(true);
 		
 		lblNewLabel = new JLabel("QUẢN LÝ CÁN BỘ");
@@ -50,7 +51,7 @@ public class CanBoView {
 		btnCongNhan.setBounds(86, 145, 187, 68);
 		frame.getContentPane().add(btnCongNhan);
 	
-		btnKySu = new JButton("Quản lý ký sư");
+		btnKySu = new JButton("Quản lý kỹ sư");
 		btnKySu.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnKySu.setBounds(357, 145, 187, 68);
 		frame.getContentPane().add(btnKySu);

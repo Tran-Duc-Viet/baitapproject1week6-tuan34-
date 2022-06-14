@@ -7,9 +7,9 @@ package Tuan4;
 public class Bai2 {
 	private String s="";
 	//Phương thức khởi tạo
-	public Bai2(String xau) {
+	public Bai2(String xau, String xauCon) {
 		String s1 = xau;
-		String s2 = "abc";
+		String s2 = xauCon;
 		int b = s1.length();
 		int c = s2.length();
 		String[] temp = s1.split(s2);

@@ -76,6 +76,7 @@ public class Tuan31 extends JFrame {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setBounds(100, 100, 920, 561);
 		frame.getContentPane().setLayout(null);
+		frame.setTitle("Giao diện tuần 3(tuần 31) - Trần Đức Việt - MSSV: 20198275");
 		frame.setVisible(true);
 
 		btnBai1 = new JButton("Bài 1");

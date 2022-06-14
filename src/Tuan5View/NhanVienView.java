@@ -37,7 +37,9 @@ public class NhanVienView {
 	public static final String colName[] = {"Họ và tên", "Tuổi", "Giới tính", "Địa chỉ", "Công việc"};//tên các cột của bảng
 	private JTextField congViec;
 	private JTextField tenTimKiem;
-	private JButton btnThem,btnClear,btnXemDS,btnTimKiem;
+	private JButton btnThem,btnClear,btnXemDS,btnTimKiem,btnClose;
+	private JLabel lblTenTimKiem,lblNewLabel,lblHoVaTen,lblTuoi,lblGioiTinh,lblDiaChi,lblCongViec;
+	private JScrollPane scrollPane;
 
 	/**
 	 * Launch the application.
@@ -58,14 +60,16 @@ public class NhanVienView {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 1121, 676);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setTitle("Giao diện quản lý nhân viên - Trần Đức Việt - MSSV: 20198275");
 		frame.getContentPane().setLayout(null);
-		JLabel lblNewLabel = new JLabel("Quản Lý Nhân Viên");
+		
+		lblNewLabel = new JLabel("Quản Lý Nhân Viên");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(383, 10, 197, 50);
 		frame.getContentPane().add(lblNewLabel);
 		
-		JScrollPane scrollPane = new JScrollPane();
+		scrollPane = new JScrollPane();
 		scrollPane.setBounds(492, 101, 522, 402);
 		frame.getContentPane().add(scrollPane);
 		
@@ -73,22 +77,22 @@ public class NhanVienView {
 		model = new DefaultTableModel();
 		scrollPane.setViewportView(table);
 		
-		JLabel lblHoVaTen = new JLabel("Họ và tên:");
+		lblHoVaTen = new JLabel("Họ và tên:");
 		lblHoVaTen.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblHoVaTen.setBounds(52, 116, 75, 29);
 		frame.getContentPane().add(lblHoVaTen);
 		
-		JLabel lblTuoi = new JLabel("Tuổi ");
+		lblTuoi = new JLabel("Tuổi ");
 		lblTuoi.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblTuoi.setBounds(52, 154, 75, 29);
 		frame.getContentPane().add(lblTuoi);
 		
-		JLabel lblGioiTinh = new JLabel("Giới Tính:");
+		lblGioiTinh = new JLabel("Giới Tính:");
 		lblGioiTinh.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblGioiTinh.setBounds(52, 196, 75, 29);
 		frame.getContentPane().add(lblGioiTinh);
 		
-		JLabel lblDiaChi = new JLabel("Địa Chỉ:");
+		lblDiaChi = new JLabel("Địa Chỉ:");
 		lblDiaChi.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblDiaChi.setBounds(52, 235, 75, 29);
 		frame.getContentPane().add(lblDiaChi);
@@ -101,7 +105,7 @@ public class NhanVienView {
 		frame.getContentPane().add(hoVaTen);
 		hoVaTen.setColumns(10);
 		
-		JLabel lblCongViec = new JLabel("Công Việc");
+		lblCongViec = new JLabel("Công Việc");
 		lblCongViec.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblCongViec.setBounds(52, 274, 116, 29);
 		frame.getContentPane().add(lblCongViec);
@@ -168,7 +172,7 @@ public class NhanVienView {
 		congViec.setBounds(206, 277, 179, 29);
 		frame.getContentPane().add(congViec);
 		
-		JButton btnClose = new JButton("Close");
+		btnClose = new JButton("Close");
 		btnClose.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		btnClose.setBounds(416, 566, 138, 50);
 		btnClose.addActionListener(new ActionListener() {
@@ -180,7 +184,7 @@ public class NhanVienView {
 		});
 		frame.getContentPane().add(btnClose);
 		
-		JLabel lblTenTimKiem = new JLabel("Tìm kiếm(bằng tên):");
+		lblTenTimKiem = new JLabel("Tìm kiếm(bằng tên):");
 		lblTenTimKiem.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblTenTimKiem.setBounds(52, 313, 138, 29);
 		frame.getContentPane().add(lblTenTimKiem);
