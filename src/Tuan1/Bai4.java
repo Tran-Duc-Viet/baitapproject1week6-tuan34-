@@ -11,17 +11,20 @@ public class Bai4{
 	//phương thức khởi tạo bài 4
 	public Bai4() {
 		int[]a=new int[100];
-		int j=0;
+		s=s+"Các số chia hết cho 3:\n";
 		for(int i=1;i<100;i++) {
-			if((i%3==0)&&(i%7==0)) {
-					a[j]=i;
-					j++;
+			if(i%3==0){
+				s=s+String.valueOf(i)+" ";			
 			}
 		}
-		for(int i=0;i<j-1;i++) {
-			String b=String.valueOf(a[i])+" ";
-			s=s.concat(b);
+		s=s+"\n";
+		s=s+"Các số chia hết cho 7:\n";
+		for(int i=1;i<100;i++) {
+			if(i%7==0){
+				s=s+String.valueOf(i)+" ";			
+			}
 		}
+		s=s+"\n";
 		
 	}
 	
